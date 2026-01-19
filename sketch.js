@@ -23,7 +23,8 @@ function draw(){
   }
 
   // Draw stuff here, such as:
-  let centerx = width/2;
+
+  frameRate(0);
   let centery = height/2;
 
   /*for (let diameter = 150; diameter > 0; diameter = diameter - 15){
@@ -31,12 +32,13 @@ function draw(){
   }
 */
   for(let x = 75; x < width; x += 200){
+    let randomy = random(0, height);
+
     for (let diameter = 150; diameter > 0; diameter = diameter - 15){
-      circle(x, centery, diameter);
+      circle(x, randomy, diameter);
+      circle(x, random(0, height), diameter)
     }
   }
-
-
 
 
 
